@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jebz Car Showroom | Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #111;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: 'Brush Script MT', cursive;
+      font-size: 2.5rem;
+      color: #e91e63;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') no-repeat center center/cover;
+      color: white;
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      background-color: rgba(0,0,0,0.5);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      background-color: rgba(0,0,0,0.4);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+    }
+
+    .features {
+      padding: 4rem 2rem;
+      background: #f4f4f4;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .feature h3 {
+      margin-bottom: 1rem;
+      color: #e91e63;
+    }
+
+    .slider {
+      padding: 4rem 2rem;
+      background: #fff;
+      text-align: center;
+    }
+
+    .slider h2 {
+      margin-bottom: 2rem;
+      color: #333;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .map {
+      padding: 2rem;
+      background: #f4f4f4;
+      text-align: center;
+    }
+
+    .map iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 300px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1.2rem 2rem;
+      font-size: 1rem;
+    }
+
+    footer p {
+      margin: 0.5rem 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .hero {
+        height: auto;
+        padding: 4rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">Jebz</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#features">Models</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Discover Your Dream Ride</h1>
+    <p>Experience the power, luxury, and innovation at Jebz Car Showroom</p>
+  </section>
+
+<section class="features" id="features">
+  <h2 style="text-align:center; margin-bottom:2rem;">Our Car Models</h2>
+  <div class="feature-grid">
+    <div class="feature">
+      <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="Car 1" width="100%">
+      <h3>Audi R8</h3>
+    </div>
+    <div class="feature">
+      <img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Innovation/si8/i8-02-media-hd.jpg" alt="Car 2" width="100%">
+      <h3>BMW i8</h3>
+    </div>
+    <div class="feature">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/2022-lamborghini-aventador-109-1625607587.jpg?crop=0.750xw:0.632xh;0.183xw,0.233xh&resize=2048:*" alt="Car 3" width="100%">
+      <h3>Lamborghini Aventador</h3>
+    </div>
+    <div class="feature">
+      <img src="https://mclaren.scene7.com/is/image/mclaren/1597-McLarenP1trade:crop-16x9?wid=1786&hei=1005" alt="Car 4" width="100%">
+      <h3>McLaren P1</h3>
+    </div>
+    <div class="feature">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/2024-mercedes-amg-gt63-643-66b52543c907c.jpg?crop=0.647xw:0.545xh;0.112xw,0.355xh&resize=2048:*" alt="Car 5" width="100%">
+      <h3>Mercedes AMG</h3>
+    </div>
+    <div class="feature">
+      <img src="https://images-porsche.imgix.net/-/media/6DFC261DD0B040A0A3FF9081BD9A36B9_7DFF4660C80843078B7D504B7A95BEEC_CZ26W03OX0001-911-carrera-s-side?w=2560&h=1440&q=45&crop=faces%2Centropy%2Cedges&auto=format" alt="Car 6" width="100%">
+      <h3>Porsche 911</h3>
+    </div>
+    <div class="feature">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/2019_Chevrolet_Camaro_base%2C_front_11.9.19.jpg/960px-2019_Chevrolet_Camaro_base%2C_front_11.9.19.jpg" alt="Car 7" width="100%">
+      <h3>Chevrolet Camaro</h3>
+    </div>
+    <div class="feature">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/2018_Ford_Mustang_GT_5.0.jpg/1200px-2018_Ford_Mustang_GT_5.0.jpg" alt="Car 8" width="100%">
+      <h3>Ford Mustang</h3>
+    </div>
+    <div class="feature">
+      <img src="https://ev-database.org/img/auto/Tesla_Model_S_2016/Tesla_Model_S_2016-01@2x.jpg" alt="Car 9" width="100%">
+      <h3>Tesla Model S</h3>
+    </div>
+    <div class="feature">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuPf68qVjTSipUZNQW7PZca6VdodU7xTrm5w&s" alt="Car 10" width="100%">
+      <h3>Vintage Rolls Royce</h3>
+    </div>
+  </div>
+</section>
+
+
+  <section class="slider" id="gallery">
+    <h2>Showroom Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/466737515/WL/JL/AI/199030012/car-showroom-interior-designing-services.jpg" alt="Showroom 1">
+      <img src="https://apollointeriors.com/wp-content/uploads/2023/10/Lamborghini-showroom-018-1200x600-1.jpeg" alt="Showroom 2">
+      <img src="https://apollointeriors.com/wp-content/uploads/2019/01/Ferrari-Showroom.jpg" alt="Showroom 3">
+      <img src="https://res.cloudinary.com/dw4e01qx8/f_auto,q_auto/images/anydqispxqxl4xcnqw0i" alt="Showroom 4">
+    </div>
+  </section>
+
+  <section class="map">
+    <h2>Visit Us</h2>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.116205452478!2d76.954563!3d11.016774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8576f5a0b0d13%3A0x5e0e0e0e0e0e0e0e!2sCoimbatore%2C%20Tamil%20Nadu%2C%20India!5e0!3m2!1sen!2sin!4v1612392098400"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 Jebz Car Showroom</p>
+    <p>Phone: <a href="tel:+917708089768" style="color:#e91e63; text-decoration: none;">7708089768</a></p>
+    <p>Email: <a href="mailto:jebinabraham@karunya.edu.in" style="color:#e91e63; text-decoration: none;">jebinabraham@karunya.edu.in</a></p>
+  </footer>
+
+</body>
+</html>
