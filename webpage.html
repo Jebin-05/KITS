@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jebz Car Showroom | Premium Rides</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: #f0f0f0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #000;
+      padding: 1.5rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+  font-family: 'Playfair Display', serif; /* elegant serif font */
+  font-size: 3.2rem;
+  color: #e91e63;
+  letter-spacing: 3px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(233, 30, 99, 0.7);
+}
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      height: 2px;
+      background: #e50914;
+      width: 0;
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      background: url('https://cdn.pixabay.com/photo/2017/01/06/19/15/audi-1957037_1280.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #e50914;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature {
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .feature h3 {
+      padding: 1rem;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: scale(1.05);
+    }
+
+    .map iframe {
+      width: 100%;
+      max-width: 900px;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+      display: block;
+      margin: 0 auto;
+    }
+
+    footer {
+      background: #000;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #e50914;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Jebz</div>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#models">Models</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#visit">Visit Us</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="hero" style="position:relative; height:600px; overflow:hidden;">
+  <img src="https://images.pexels.com/photos/373282/pexels-photo-373282.jpeg?cs=srgb&dl=pexels-pixabay-373282.jpg&fm=jpg" alt="3D Mercedes Benz Car" style="width:100%; height:600px; object-fit:cover; filter: brightness(0.85);" />
+  <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); color:#fff; text-align:center; font-family:'Playfair Display', serif;">
+    <h1 style="font-size:4rem; letter-spacing: 5px; text-shadow: 0 2px 8px rgba(0,0,0,0.7);">JEBZ Car Showroom</h1>
+    <p style="font-size:1.4rem; font-weight:300; text-shadow: 0 2px 6px rgba(0,0,0,0.6);">Experience Luxury, Drive Perfection</p>
+    <a href="#inventory" style="padding: 12px 30px; background:#e91e63; color:#fff; border-radius:30px; font-weight:700; text-transform:uppercase; text-decoration:none; box-shadow:0 4px 15px rgba(233,30,99,0.6); transition:background 0.3s ease;">Explore Cars</a>
+  </div>
+</section>
+
+
+<section class="section" id="models">
+  <h2>Our Top Models</h2>
+  <div class="feature-grid">
+    <div class="feature"><img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d" alt="Audi R8"><h3>Audi R8</h3></div>
+    <div class="feature"><img src="https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Innovation/si8/i8-02-media-hd.jpg" alt="BMW i8"><h3>BMW i8</h3></div>
+    <div class="feature"><img src="https://hips.hearstapps.com/hmg-prod/images/2022-lamborghini-aventador-109-1625607587.jpg" alt="Lamborghini"><h3>Lamborghini Aventador</h3></div>
+    <div class="feature"><img src="https://mclaren.scene7.com/is/image/mclaren/1597-McLarenP1trade:crop-16x9?wid=1786&hei=1005" alt="McLaren"><h3>McLaren P1</h3></div>
+    <div class="feature"><img src="https://hips.hearstapps.com/hmg-prod/images/2024-mercedes-amg-gt63-643-66b52543c907c.jpg" alt="Mercedes"><h3>Mercedes AMG</h3></div>
+    <div class="feature"><img src="https://images-porsche.imgix.net/-/media/6DFC261DD0B040A0A3FF9081BD9A36B9_7DFF4660C80843078B7D504B7A95BEEC_CZ26W03OX0001-911-carrera-s-side" alt="Porsche"><h3>Porsche 911</h3></div>
+  </div>
+</section>
+
+<section class="section" id="gallery">
+  <h2>Showroom Gallery</h2>
+  <div class="gallery-grid">
+    <img src="https://5.imimg.com/data5/SELLER/Default/2024/11/466737515/WL/JL/AI/199030012/car-showroom-interior-designing-services.jpg" alt="Interior">
+    <img src="https://apollointeriors.com/wp-content/uploads/2023/10/Lamborghini-showroom-018-1200x600-1.jpeg" alt="Lambo">
+    <img src="https://apollointeriors.com/wp-content/uploads/2019/01/Ferrari-Showroom.jpg" alt="Ferrari">
+    <img src="https://res.cloudinary.com/dw4e01qx8/f_auto,q_auto/images/anydqispxqxl4xcnqw0i" alt="Modern Showroom">
+  </div>
+</section>
+
+<!-- Replace the old #visit section with the following -->
+<section class="section" id="visit">
+  <h2>Visit Our Coimbatore Experience Center</h2>
+  <div class="map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.239013176448!2d76.96347567504176!3d11.01684489215964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857c3f878b5d1%3A0x2f8ffb0730e2843!2sCoimbatore%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1717159000000!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Jebz Car Showroom</p>
+  <p>Phone: <a href="tel:+917708089768">7708089768</a> | Email: <a href="mailto:jebinabraham@karunya.edu.in">jebinabraham@karunya.edu.in</a></p>
+</footer>
+
+</body>
+</html>
